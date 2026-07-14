@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            💧 Water Tracker
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                Dashboard
+            </li>
+
+            <li onclick="location.href='history.html'">
+                History
+            </li>
+
+            <li onclick="location.href='compare.html'">
+                Compare
+            </li>
+
+            <li onclick="location.href='reminder.html'">
+                Reminder
+            </li>
+
+            <li onclick="location.href='profile.html'">
+                Profile
+            </li>
+
+            <li onclick="logout()">
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <!-- Top Header -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h2 id="welcomeText">
+
+                    Welcome
+
+                </h2>
+
+                <p id="todayDate"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Summary Cards -->
+
+        <div class="summary-grid">
+
+            <div class="card">
+
+                <h3>Today's Intake</h3>
+
+                <h1 id="todayIntake">
+
+                    0 ml
+
+                </h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Daily Goal</h3>
+
+                <h1 id="dailyGoal">
+
+                    0 ml
+
+                </h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Progress</h3>
+
+                <div class="progress-circle">
+
+                    <span id="progressText">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Section -->
+
+        <div class="bottom-grid">
+
+            <!-- Today's Entries -->
+
+            <div class="card entries">
+
+                <h3>
+
+                    Today's Entries
+
+                </h3>
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+
+                        <th>Time</th>
+
+                        <th>Amount</th>
+
+                        <th>Unit</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="todayEntries">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Add Water -->
+
+            <div class="card add-water">
+
+                <h3>
+
+                    Add Water
+
+                </h3>
+
+                <input
+                        type="number"
+                        id="quantity"
+                        placeholder="Quantity">
+
+						<select id="unit" required>
+
+						    <option value="" selected disabled>
+						        Choose your unit
+						    </option>
+
+						    <option value="ML">
+						        ML
+						    </option>
+
+						    <option value="GLASS">
+						        Glass
+						    </option>
+
+						    <option value="LITRE">
+						        Litre
+						    </option>
+
+						</select>
+
+                <button onclick="addWater()">
+
+                    Add Entry
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/api.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

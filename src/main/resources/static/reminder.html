@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Reminder</title>
+
+<link rel="stylesheet"
+      href="css/reminder.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>⏰ Water Reminder</h1>
+
+<p>
+
+Choose your preferred reminder time.
+
+</p>
+
+<label>
+
+Reminder Time
+
+</label>
+
+<input
+type="time"
+id="reminderTime">
+
+<button id="saveBtn">
+
+Save Reminder
+
+</button>
+
+<div id="message"></div>
+
+<br>
+
+<button
+class="back"
+
+onclick="location.href='dashboard.html'">
+
+← Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="js/api.js"></script>
+
+<script src="js/reminder.js"></script>
+
+</body>
+
+</html>

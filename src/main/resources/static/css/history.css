@@ -1,0 +1,329 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    background:#edf4fb;
+
+    overflow:hidden;
+
+}
+
+.layout{
+
+    display:flex;
+
+    height:100vh;
+
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar{
+
+    width:240px;
+
+    background:#0B5ED7;
+
+    color:white;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:40px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.sidebar li:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.active{
+
+    background:white;
+
+    color:#0B5ED7;
+
+    font-weight:bold;
+
+}
+
+/* ================= Content ================= */
+
+.content{
+
+    flex:1;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.header{
+
+    margin-bottom:20px;
+
+}
+
+.header h1{
+
+    color:#0B5ED7;
+
+}
+
+/* ================= Table ================= */
+
+.table-card{
+
+    flex:1;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#EAF4FF;
+
+}
+
+th{
+
+    padding:15px;
+
+    color:#0B5ED7;
+
+    text-align:left;
+
+}
+
+tbody{
+
+    display:block;
+
+    max-height:430px;
+
+    overflow-y:auto;
+
+}
+
+thead,
+tbody tr{
+
+    display:table;
+
+    width:100%;
+
+    table-layout:fixed;
+
+}
+
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+/* ================= Buttons ================= */
+
+.edit{
+
+    background:#FFC107;
+
+    color:black;
+
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-right:8px;
+
+    transition:.3s;
+
+}
+
+.edit:hover{
+
+    background:#e6ac00;
+
+}
+
+.delete{
+
+    background:#DC3545;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.delete:hover{
+
+    background:#bb2d3b;
+
+}
+
+/* ================= Pagination ================= */
+
+.pagination{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.pagination button{
+
+    background:#0B5ED7;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.pagination button:hover{
+
+    background:#0849a5;
+
+}
+
+#pageNumber{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#0B5ED7;
+
+}
+
+/* ================= Mobile ================= */
+
+@media(max-width:900px){
+
+    body{
+
+        overflow:auto;
+
+    }
+
+    .layout{
+
+        flex-direction:column;
+
+        height:auto;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+
+    }
+
+    .content{
+
+        padding:15px;
+
+    }
+
+    .table-card{
+
+        overflow:auto;
+
+    }
+
+    table{
+
+        min-width:700px;
+
+    }
+
+}
