@@ -1,6 +1,6 @@
 const API = {
 
-    BASE_URL: "http://localhost:8080",
+    BASE_URL: window.location.origin,
 
     AUTH: {
 
@@ -14,18 +14,18 @@ const API = {
 
     },
 
-	WATER: {
+    WATER: {
 
-	    ADD: "/api/water/add",
+        ADD: "/api/water/add",
 
-	    HISTORY: "/api/water/history",
+        HISTORY: "/api/water/history",
 
-	    COMPARE: "/api/water/compare",
+        COMPARE: "/api/water/compare",
 
-	    UPDATE: "/api/water/",
+        UPDATE: "/api/water/",
 
-	    DELETE: "/api/water/"
+        DELETE: "/api/water/"
 
-	}
+    }
 
 };
